@@ -23,15 +23,15 @@ spec:
           image: stacksimplify/kube-usermgmt-webapp:1.0.0-MySQLDB
           imagePullPolicy: Always
           ports: 
-            - containerPort: 8080           
+            - containerPort: 8080
           env:
             - name: DB_HOSTNAME
-              value: "mysql"            
+              value: "mysql" # Matches the ExternalName service name.
             - name: DB_PORT
               value: "3306"            
             - name: DB_NAME
-              value: "webappdb"            
+              value: "webappdb" # Name of the DB you created on Azure MySql server.
             - name: DB_USERNAME
-              value: "dbadmin@akswebappdb"            
+              value: "dbadmin@akswebappdb01" # Copy and paste from Azure MySql overview.
             - name: DB_PASSWORD
-              value: "Redhat1449"            
+              value: "Redhat1449" # MySql Server password used at the time of creation.

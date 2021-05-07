@@ -7,7 +7,7 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    app: usermgmt-webapp
+    app: usermgmt-webapp # Matches the pod name given in the deployment.
   ports: 
     - port: 80
       targetPort: 8080
