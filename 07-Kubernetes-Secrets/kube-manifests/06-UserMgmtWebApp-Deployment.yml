@@ -34,7 +34,7 @@ spec:
             - name: DB_USERNAME
               value: "root"            
             - name: DB_PASSWORD
-              valueFrom: 
+              valueFrom: # Password comes from secret config.
                 secretKeyRef:
-                  name: mysql-db-password
-                  key: db-password       
+                  name: mysql-db-password # Secret config name.
+                  key: db-password # Secret key.
