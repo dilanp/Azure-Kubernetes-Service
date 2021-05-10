@@ -247,6 +247,7 @@ time="2020-08-24T12:08:53Z" level=info msg="Deleting TXT record named 'eapp1' fo
 ```
 
 ## References
+- https://github.com/kubernetes-sigs/external-dns
 - https://github.com/kubernetes-sigs/external-dns/blob/master/docs/tutorials/azure.md
 - Open Issue and Break fix: https://github.com/kubernetes-sigs/external-dns/issues/1548
 - https://github.com/kubernetes/ingress-nginx/tree/master/charts/ingress-nginx#configuration
