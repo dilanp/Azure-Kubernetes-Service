@@ -24,7 +24,7 @@ metadata:
   name: ns-resource-quota
   namespace: dev3
 spec:
-  hard:
+  hard: # Limits of resources dev3 namespace can have.
     requests.cpu: "1"
     requests.memory: 1Gi
     limits.cpu: "2"

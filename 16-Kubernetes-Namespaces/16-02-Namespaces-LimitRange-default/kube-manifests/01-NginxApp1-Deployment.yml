@@ -4,7 +4,7 @@ metadata:
   name: app1-nginx-deployment
   labels:
     app: app1-nginx
-  namespace: dev3    
+  namespace: dev3 # Namespace this resource belongs to.
 spec:
   replicas: 1
   selector:
@@ -21,3 +21,4 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 80
+          #No need of container level resource limits as they are defined at namespace level.
