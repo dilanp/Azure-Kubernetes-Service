@@ -27,7 +27,7 @@ spec:
             - containerPort: 8080           
           env:
             - name: DB_HOSTNAME
-# Virtual nodes expect a full DNS name of a service            
+              # Virtual nodes expect a full DNS name of a service            
               value: "mysql.default.svc.cluster.local"            
             - name: DB_PORT
               value: "3306"            
@@ -40,7 +40,7 @@ spec:
                 secretKeyRef:
                   name: mysql-db-password
                   key: db-password       
-# To schedule pods on Azure Virtual Nodes            
+      # To schedule pods on Azure Virtual Nodes            
       nodeSelector:
         kubernetes.io/role: agent
         beta.kubernetes.io/os: linux
