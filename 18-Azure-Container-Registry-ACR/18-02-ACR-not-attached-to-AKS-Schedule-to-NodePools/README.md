@@ -90,7 +90,7 @@ export ACR_IMAGE_TAG=v1
 echo $ACR_REGISTRY, $ACR_NAMESPACE, $ACR_IMAGE_NAME, $ACR_IMAGE_TAG
 
 # Login to ACR
-docker login $ACR_REGISTRY
+az acr login -n $ACR_REGISTRY
 
 # Tag
 docker tag acr-app2:v1  $ACR_REGISTRY/$ACR_NAMESPACE/$ACR_IMAGE_NAME:$ACR_IMAGE_TAG

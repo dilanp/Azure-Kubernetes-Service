@@ -16,13 +16,13 @@ spec:
     spec:
       containers:
         - name: acrdemo2ss-vn
-          image: acrdemo2ss.azurecr.io/app3/acr-app3:v1 # Update Image Name 
+          image: acrdemo2ss.azurecr.io/app3/acr-app3:v1 # Points to ACR image. 
           imagePullPolicy: Always
           ports:
             - containerPort: 80
-      imagePullSecrets:   # Update Image Pull Secret Name we creted
+      imagePullSecrets:   # Image Pull Secret Name we creted
         - name: acrdemo2ss-secret  
-# To schedule pods on Azure Virtual Nodes            
+      # To schedule pods on Azure Virtual Nodes            
       nodeSelector:
         kubernetes.io/role: agent
         beta.kubernetes.io/os: linux

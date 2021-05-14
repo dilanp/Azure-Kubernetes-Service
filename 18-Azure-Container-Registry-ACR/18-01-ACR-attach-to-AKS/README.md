@@ -84,14 +84,14 @@ docker stop kube-nginx-acr
 ### Build, Test Locally, Tag and Push to ACR
 ```
 # Export Command
-export ACR_REGISTRY=acrforaksdemo2.azurecr.io
+export ACR_REGISTRY=acr4aksdemo2.azurecr.io
 export ACR_NAMESPACE=app1
 export ACR_IMAGE_NAME=kube-nginx-acr
 export ACR_IMAGE_TAG=v1
 echo $ACR_REGISTRY, $ACR_NAMESPACE, $ACR_IMAGE_NAME, $ACR_IMAGE_TAG
 
 # Login to ACR
-docker login $ACR_REGISTRY
+az acr login -n $ACR_REGISTRY
 
 # Tag
 docker tag kube-nginx-acr:v1  $ACR_REGISTRY/$ACR_NAMESPACE/$ACR_IMAGE_NAME:$ACR_IMAGE_TAG
@@ -113,7 +113,7 @@ docker push $ACR_REGISTRY/$ACR_NAMESPACE/$ACR_IMAGE_NAME:$ACR_IMAGE_TAG
 ## Step-05: Configure ACR integration for existing AKS clusters
 ```
 #Set ACR NAME
-export ACR_NAME=acrforaksdemo2
+export ACR_NAME=acr4aksdemo2
 echo $ACR_NAME
 
 # Template
