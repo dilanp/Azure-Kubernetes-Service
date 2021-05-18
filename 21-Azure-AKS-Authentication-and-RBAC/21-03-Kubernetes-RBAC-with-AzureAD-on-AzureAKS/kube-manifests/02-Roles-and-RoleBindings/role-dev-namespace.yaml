@@ -2,7 +2,7 @@ kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: dev-user-full-access-role
-  namespace: dev
+  namespace: dev # Roles can ONLY give access to resources at namespace level!
 rules:
 - apiGroups: ["", "extensions", "apps"]
   resources: ["*"]

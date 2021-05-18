@@ -68,7 +68,7 @@ az role assignment create \
 # Create Dev User
 DEV_AKS_USER_OBJECT_ID=$(az ad user create \
   --display-name "AKS Dev1" \
-  --user-principal-name aksdev1@stacksimplifygmail.onmicrosoft.com \
+  --user-principal-name aksdev1@dilanp2105outlook.onmicrosoft.com \
   --password @AKSDemo123 \
   --query objectId -o tsv)
 echo $DEV_AKS_USER_OBJECT_ID  

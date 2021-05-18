@@ -2,13 +2,12 @@ kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: dev-user-access-rolebinding
-  namespace: dev
-roleRef:
+  namespace: dev # RoleBindings can be ONLY applied at namespace level!
+roleRef: # What api-groups/resources/verbs to access.
   apiGroup: rbac.authorization.k8s.io
   kind: Role
-  name: dev-user-full-access-role
-subjects:
+  name: dev-user-full-access-role # Name of the associated role definition.
+subjects: # What users/processes to access K8s resources
 - kind: Group
   namespace: dev
-  #name: groupObjectId # Your Azure AD Group Object ID: devaksteam
-  name: "4123d819-9ed6-460b-8321-39f02157536b"  
+  name: "02bb3962-ea9c-4d5a-af38-c5acfa575e96" #groupObjectId of Azure AD Group (devaksteam)
