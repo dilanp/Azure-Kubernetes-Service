@@ -19,7 +19,7 @@ kubectl apply -f kube-manifests/apps
 
 # List Pods, Deploy & Service
 kubectl get pod
-kubect get svc
+kubectl get svc
 
 # Access Application (Only if our Cluster is Public Subnet)
 http://<PublicIP-from-Get-SVC-Output>
