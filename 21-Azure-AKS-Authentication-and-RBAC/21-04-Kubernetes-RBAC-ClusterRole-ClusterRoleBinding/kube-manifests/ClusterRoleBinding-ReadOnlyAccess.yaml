@@ -5,8 +5,7 @@ metadata:
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: aks-cluster-readonly-role
+  name: aks-cluster-readonly-role # Name of the associated cluster role definition.
 subjects:
 - kind: Group
-  #name: groupObjectId # Your Azure AD Group Object ID: aksreadonly
-  name: "e8f709f7-4029-4fdb-b786-d0af29445fc9"  
+  name: "9b39b811-512f-488f-8002-8dced722d6fa" # groupObjectId of Azure AD Group (aksreadonly)

@@ -33,7 +33,7 @@ az role assignment create \
 # Create AKS ReadOnly User in Azure AD
 AKS_READONLY_USER_OBJECT_ID=$(az ad user create \
   --display-name "AKS READ1" \
-  --user-principal-name aksread1@stacksimplifygmail.onmicrosoft.com \
+  --user-principal-name aksread1@dilanp2105outlook.onmicrosoft.com \
   --password @AKSDemo123 \
   --query objectId -o tsv)
 echo $AKS_READONLY_USER_OBJECT_ID
