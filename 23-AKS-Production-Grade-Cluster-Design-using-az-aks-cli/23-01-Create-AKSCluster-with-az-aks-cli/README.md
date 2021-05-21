@@ -82,7 +82,7 @@ echo $AKS_AD_AKSADMIN_GROUP_ID
 # Replace with your AD Domain - aksadmin1@stacksimplifygmail.onmicrosoft.com
 AKS_AD_AKSADMIN1_USER_OBJECT_ID=$(az ad user create \
   --display-name "AKS Admin1" \
-  --user-principal-name aksadmin1@stacksimplifygmail.onmicrosoft.com \
+  --user-principal-name aksadmin1@dilanp2105outlook.onmicrosoft.com \
   --password @AKSDemo123 \
   --query objectId -o tsv)
 echo $AKS_AD_AKSADMIN1_USER_OBJECT_ID
@@ -91,7 +91,7 @@ echo $AKS_AD_AKSADMIN1_USER_OBJECT_ID
 az ad group member add --group aksadmins --member-id $AKS_AD_AKSADMIN1_USER_OBJECT_ID
 
 # Make a note of Username and Password
-Username: aksadmin1@stacksimplifygmail.onmicrosoft.com
+Username: aksadmin1@dilanp2105outlook.onmicrosoft.com
 Password: @AKSDemo123
 ```
 
@@ -144,7 +144,7 @@ Go to Services -> Azure Active Directory -> Properties -> Tenant ID
 
 # Set Windows Server/Node Username & Password
 AKS_WINDOWS_NODE_USERNAME=azureuser
-AKS_WINDOWS_NODE_PASSWORD="P@ssw0rd1234"
+AKS_WINDOWS_NODE_PASSWORD="RX%%hVedtheCzWH1Gk*&lmYYFS%1VUts"
 echo $AKS_WINDOWS_NODE_USERNAME, $AKS_WINDOWS_NODE_PASSWORD
 ```
 
@@ -200,7 +200,7 @@ az aks get-credentials --name ${AKS_CLUSTER}  --resource-group ${AKS_RESOURCE_GR
 kubectl get nodes
 URL: https://microsoft.com/devicelogin
 Code: HL724557M
-Username: aksadmin1@stacksimplifygmail.onmicrosoft.com
+Username: aksadmin1@dilanp2105outlook.onmicrosoft.com
 Password: @AKSDemo123
 
 # Cluster Info
