@@ -87,16 +87,16 @@ terraform apply
 ## Step-07: Verify if Nodepools added successfully
 ```
 # List Node Pools
-az aks nodepool list --resource-group terraform-aks-dev2 --cluster-name  terraform-aks-dev2-cluster --output table
+az aks nodepool list --resource-group terraform-aks-dev --cluster-name  terraform-aks-dev-cluster --output table
 
 # Configure kubectl with Default Admin Credentials
-az aks get-credentials --resource-group terraform-aks-dev2 --name  terraform-aks-dev2-cluster --admin
+az aks get-credentials --resource-group terraform-aks-dev --name  terraform-aks-dev-cluster --admin
 
 # List Nodes using Labels
 kubectl get nodes -o wide
 kubectl get nodes -o wide -l nodepoolos=linux
 kubectl get nodes -o wide -l nodepoolos=windows
-kubectl get nodes -o wide -l environment=dev2
+kubectl get nodes -o wide -l environment=dev
 ```
 
 
@@ -109,7 +109,7 @@ kubectl get nodes -o wide -l environment=dev2
 cd 24-05-Create-AKS-Cluster-Custom-VNET/
 
 # Deploy All Apps
-kubectl apply -R -f kube-manifests/
+kubectl apply -Rf kube-manifests/
 
 # List Pods
 kubectl get pods -o wide
