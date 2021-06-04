@@ -17,7 +17,7 @@ variable "resource_group_name" {
   default = "terraform-aks"
 }
 
-# Azure AKS Environment Name
+# Azure AKS Environment Name - NOT NEEDED
 variable "environment" {
   type = string  
   description = "This variable defines the Environment"  
@@ -27,7 +27,7 @@ variable "environment" {
 
 # AKS Input Variables
 
-# SSH Public Key for Linux VMs
+# SSH Public Key for Linux VMs - NOT NEEDED
 variable "ssh_public_key" {
   #default = "~/.ssh/aks-prod-sshkeys-terraform/aksprodsshkey.pub"
   description = "This variable defines the SSH Public Key for Linux k8s Worker nodes"  
@@ -43,7 +43,7 @@ variable "windows_admin_username" {
 # Windows Admin Password for k8s worker nodes
 variable "windows_admin_password" {
   type = string
-  default = "P@ssw0rd1234"
+  default = "P@ssw0rd1234567"
   description = "This variable defines the Windows admin password k8s Worker nodes"  
 }
 

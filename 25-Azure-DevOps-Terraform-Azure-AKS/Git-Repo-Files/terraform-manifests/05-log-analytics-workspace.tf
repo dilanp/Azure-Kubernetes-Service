@@ -1,4 +1,5 @@
 # Create Log Analytics Workspace
+# Variable var.environment will be picked up from the pipeline.
 resource "azurerm_log_analytics_workspace" "insights" {
   name                = "${var.environment}-logs-${random_pet.aksrandom.id}"
   location            = azurerm_resource_group.aks_rg.location
